@@ -1,24 +1,20 @@
-# README
+# blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple CRUD blog application using Ruby on Rails
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+#### install dependencies from package.json
+```
+$ npm install
+```
 
-* System dependencies
+#### install gem dependencies
+```
+$ bundle install
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### start db migration
+```
+$ rails db:migrate
+```

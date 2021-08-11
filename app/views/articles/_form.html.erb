@@ -1,0 +1,40 @@
+<%= form_with model: article do |form| %>
+  <div>
+    <div>
+      <%= form.label :title %>
+    </div>
+    <div>
+      <%= form.text_field :title %>
+    </div>
+    <% article.errors.full_messages_for(:title).each do |message| %>
+      <div style="color: red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <br>
+
+  <div>
+    <div>
+      <%= form.label :body %>
+    </div>
+    <div>
+      <%= form.text_field :body %>
+    </div>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div style="color: red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <div>
+      <%= form.label :status %>
+      <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </div>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
